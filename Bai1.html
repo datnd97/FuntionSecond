@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="Main()">
+    <script>
+        // Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+        function Main() {
+            let number = parseFloat(prompt('Mời bạn nhập số:'));
+            number = checkNumber(number);
+            alert("Bình phương của nó là:" + getSquared(number));
+        }
+        // Hàm trả về giá trị bình phương:
+        function getSquared(num) {
+            return num * num;
+        }
+        // Hàm kiểm tra số này có Số không :
+        function checkNumber(num) {
+            let rs;
+            while (isNaN(num)) {
+                num = parseInt(prompt("Mời bạn nhập số:"));
+            }
+            return rs = num;
+
+        }
+    </script>
+</body>
+
+</html>

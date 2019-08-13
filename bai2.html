@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="Main()">
+    <script>
+        // Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+        const PI = 3.14;
+        function Main() {
+            let r = parseFloat(prompt('Mời bạn nhập bán kính hình tròn:'));
+            alert("Diện tích hình tròn là: " + setAcreage(r));
+            alert("Chu vi hình tròn là: " + setPerimeter(r));
+        }
+        function setAcreage(num) {
+            return num * num * PI;
+        }
+        function setPerimeter(num) {
+            return num * 2 * PI;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="Main()">
+
+    <p>Moi Ban Truyen Ki tu:</p>
+    <input type="text" id="input" oninput="checkValue(this.value)">
+    <p>Ket qua la:<span id="show"></span></p>
+    <script>
+        // Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. 
+        let newArray;
+        let count = 0;
+        function Main() {
+            let doDai = parseInt(prompt('Moi ban nhap do dai cua mang:'));
+            newArray = getArray(doDai);
+        }
+
+        function checkValue(valNum) {
+
+            let rs = isCount(valNum);
+            if (rs == -1) {
+                rs = "Khong co trong mang";
+            }
+            else {
+                rs = "Xuat hien " + rs + " lan trong mang";
+            }
+            document.getElementById('show').innerHTML = rs;
+
+        }
+
+        function isCount(number) {
+            let rs = -1;
+
+            let count = 0;
+            for (let i = 0; i < newArray.length; i++) {
+                if (number == newArray[i]) {
+                    count++;
+                    rs = count;
+                }
+            }
+            return rs;
+        }
+
+        function getArray(number) {
+            let array = [];
+            let x = 0;
+
+            for (let i = 0; i < number; i++) {
+                array[x] = parseInt(prompt("Moi ban nhap gia tri:"));
+                alert("Gia tri la : " + array[x] + " o vi tri thu : " + x);
+                x++;
+
+
+            }
+            return array;
+        }
+
+    </script>
+</body>
+
+</html>
